@@ -72,3 +72,11 @@ Vide mais detalhes no comentários do exemplo de script a seguir.
 
 ![Site para gestão de jogos, bolões e apostas na Mega Sena](https://megapower-loterias.com.br/assets/img/illustrations/MegaPower-QRCode-Link.png)
 
+# Agradecimentos
+- O Editor on-line para Markdown, que me ajudou a elaborar este documento. Simplesmene o melhor: [Stackedit](https://stackedit.io/app#)
+- Ao GitHUb que hospeda os nossos projetos gratuitamente!
+- Aos meus dois braços, pois sempre estiveram ao meu lado!
+- Ao café que me deixa com cérebro ativo!
+- A Heineken que faz o contrário do café, quando eu preciso dormir!
+- A minha filha que me inspira!
+- E, a todos que quiserem colaborar de alguma forma com este projeto.
