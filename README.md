@@ -68,7 +68,7 @@ Vide mais detalhes no comentários do exemplo de script a seguir.
 
  - Me paguando umas cervejas Heineken!  
  - Apoiando projeto no GitHub!
- - Acessando e divulgando o meu site de gestão de bolões e apostas na Mega Sena, o [Mega Power](https://megapower-loterias.com.br/ width="250" height="250")
+ - Acessando e divulgando o meu site de gestão de bolões e apostas na Mega Sena, o [Mega Power](https://megapower-loterias.com.br/ | width="250" height="250")
 
 ![Site para gestão de jogos, bolões e apostas na Mega Sena](https://megapower-loterias.com.br/assets/img/illustrations/MegaPower-QRCode-Link.png)
 
