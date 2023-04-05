@@ -1,0 +1,86 @@
+﻿Brasil
+CORONAVÍRUS (COVID-19)
+Simplifique!
+Participe
+Acesso à informação
+Legislação
+Canais
+O conteúdo desse portal pode ser acessível em Libras usando o VLibras
+Conheça a NF-eServiçosLegislaçãoDocumentosDownloadsÁrea RestritaDocumentos e outros
+Serviços
+Legislação
+Documentos
+Downloads
+Estatísticas da NF-e
+NF-e Autorizadas
+36,42 bilhões
+Número de Emissores
+2,191 milhões
+... saiba mais
+Área Restrita
+Central de Atendimento
+Perguntas Frequentes
+Portais e Secretarias
+Portais Estaduais da NF-e
+Selecione
+Secretarias de Fazenda
+Selecione
+Você está aqui:
+Página Principal
+>
+Serviços
+>
+Consultar NF-e
+Consultar NF-e
+Nova Consulta
+Download do documento*
+*Requer certificado digital.
+Dados Gerais
+Chave de Acesso5222 0915 8005 4500 0311 5500 1000 0919 6110 0186 3258Número91961Versão XML4.00
+NFe
+Emitente
+Destinatário
+Produtos e Serviços
+Totais
+Transporte
+Cobrança
+Informações Adicionais
+Dados da NF-e
+Modelo55Série1Número91961Data de Emissão16/09/2022 09:42:42-03:00
+Data/Hora de Saída ou da Entrada
+16/09/2022 09:42:42-03:00Valor Total da Nota Fiscal 424.245,72
+Emitente
+CNPJ15.800.545/0003-11Nome / Razão SocialABBVIE FARMACEUTICA LTDAInscrição Estadual105203262UFGO
+Destinatário
+CNPJ00.394.544/0008-51Nome / Razão SocialCOORD GER REC LOGIST MIN SAUDEInscrição EstadualUFDF
+Destino da operação
+2 - Operação Interestadual
+Consumidor final
+1 - Consumidor final
+Presença do Comprador
+9 - Operação não presencial (outros)
+Emissão
+Processo
+0 - com aplicativo do Contribuinte
+Versão do Processo4.0.0.0
+Tipo de Emissão1 - NormalFinalidade
+1 - Normal
+Natureza da OperaçãoVnd.mer.adq.rec.ter.ent.des.cnt.ord.adq.or.vnd.ordIndicador de Intermediador/Marketplace
+0 - Operação sem intermediador
+Tipo da Operação
+1 - Saída
+Digest Value da NF-e
+PqCrv9h9tfkF8rwyWjYJFhOAZRQ=
+Situação Atual:
+AUTORIZADA
+(Ambiente de autorização:
+produção)
+Eventos da NF-eProtocoloData AutorizaçãoData Inclusão AN
+Autorização de Uso
+152225509044015 16/09/2022 às 11:42:55-03:0016/09/2022 às 12:01:53
+Exibir Autorização de Uso
+Preparar aba para impressão
+Preparar documento para impressão
+Conheça a NF-eServiçosLegislaçãoDocumentosDownloadsÁrea RestritaDocumentos e outros
+Portal da NF-e 2023 - Nota Fiscal Eletrônica
+Receita Federal

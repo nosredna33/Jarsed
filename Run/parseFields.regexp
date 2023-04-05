@@ -1,0 +1,37 @@
+\r\n|\n|g+
+\n\n+|\n|g+
+Brasil.*Dados Gerais||g+
+Chave de Acesso|ChaveAcesso: |g+
+(ChaveAcesso:) *([0-9 ]*)|$1 "$2"\n|g+
+(N.*mero)([0-9]*)(Vers.*XML.*)|Numero: "$2"\n$3|g+
+Vers.*XML([^\n]*)\n|VersaoXML: "$1"\n|g+
+NFe(.*)Modelo|Modelo#|g+
+Modelo#([0-9]+).*rie([0-9]+).*mero([0-9]+)Data de Emis.*o(.*)\nData|Modelo: "$1"\nSerie: "$2"\nNumeroSeq: "$3"\nEmissaoEm: $4\nData|g+
+EmissaoEm.*([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9])\nData|EmissaoEm: "$3-$2-$1T$4:$5:$6"\nData|g+
+Data.*Entrada(.*)\nValor |DataSaidaEntrada: "$1"\nValor: |g+
+DataSaidaEntrada. .([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).\nValor|DataSaidaEntrada: "$3-$2-$1T$4:$5:$6"\nValor|g+
+Valor.*Fiscal (.*)\n|ValorTotalNFe: "$1"\n|g
+ValorTotalNFe: "(.*)(\.)(.*)"|ValorTotalNFe: "$1$3"|g+
+ValorTotalNFe: "(.*)(,)(.*)"|ValorTotalNFe: "$1.$3"|g+
+Emitente.*CNPJ(.*)Nome .* Social(.*)Inscri.*Estadual([0-9]*)UF([A-Z][A-Z])+.*Destina.*\nCNPJ|CNPJEmitente: "$1"\nNomeEmitente: "$2"\nIEEmitente: "$3"\nIEUFEmitente: "$4"\nCNPJDestinatario#|g+
+CNPJDestinatario#(.*)Nome|CNPJDestinatario: "$1"\nNome#|g+
+Nome#.*Social(.*)Inscri.*Estadual([0-9]*)UF([A-Z][A-Z])\n|NomeDestinatario: "$1"\nIEDestinatario: "$2"\nIEUFDestinatario: "$3"\n|g+
+Destino da operação.*([0-9]+) - (.*)\nConsumidor |Operacao: {key: $1, value: "$2"}\nConsumidorFinal: |g+
+ConsumidorFinal: final.*([0-9]+) - (.*)\nPresença|ConsumidorFinal: {key: $1, value: "$2"}\nPresencaComprador: |g+
+PresencaComprador:  do Comprador\n([0-9]+) - (.*)\nEmis.*Processo\n([0-9]+) - (.*)\nVers.*Processo|PresencaComprador: {$1, "$2"}\nProcessoEmissao: {$3, "$4"}\nProcesso#|g+
+Processo#.*Tipo de Emiss.*([0-9]+) - (.*)Finalidade\n|TipoEmissao: {key: $1, value: "$2"}\nFinalidade#|g+
+Finalidade#(.*)([0-9]+) - (.*)\nNatureza|Finalidade: {key: $2, value: "$3"}\nNatureza#|g+
+Natureza# da Oper.*o(.*)Indicador.*\n([0-9]+) - (.*)\nTipo|NaturezaOperacao: "$1"\nMarketplace: {key: $2, value: "$3"}\nTipoOperacao#|g+
+TipoOperacao#.*da .*\n([0-9]+) - (.*)\nDigest|TipoOperacao: {key: $1, value: "$2"}\nDigestNF#|g+
+DigestNF#.*NF-e\n([^\n]*)\n|DigestNFe: "$1"\n|g+
+Situa.*Atua.*\n([^\n]*)\n([^\n]*)\n([^\n]*)\nEventos|SituacaoAtual: "$1 $2 $3"\nEventos#|g+
+Eventos#.*Protocolo.*Data.*Auto.*Data Inc.*\n(Auto.*Uso)\n(.*)\nExibir|EventosNFe: "$1"\nEventosNFeProtocolo#\nEventosNFeProtocoloDataAuto#\nEventosNFeProtocoloDataInc#\n$2\nExibir|g+
+EventosNFeProtocolo#(.*)#\n([0-9]+) (.*)\nExibir|EventosNFeProtocolo: "$2"$1\n$3\nExibir|g+
+EventosNFeProtocoloDataAuto#\n.*([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]).*s ([0-9][0-9]).([0-9][0-9]).([0-9][0-9])-([0-9][0-9]).([0-9][0-9])(.*)\nExibir|EventosNFeProtocoloDataAuto: "$3-$2-$1T$4:$5:$6"\nEventosNFeProtocoloDataInc# $9\nExibir|g+
+EventosNFeProtocoloDataInc# ([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]).*s ([0-9][0-9]).([0-9][0-9]).([0-9][0-9])(.*)\nExibir|EventosNFeProtocoloDataInc: "$3-$2-$1T$4:$5:$6"$7\nExibir|g+
+Exibir (.*)Receita Federal\n(.*)|###FIM###\n|g+
+([^\n]+)\n|\t$1,\n|g+
+(.*),\n\t###FIM###(.*)|ZZ#INICIO###$1\n###FIM###\n|g+
+ZZ#INICIO###\n\t,\n(.*)|ZZ#INICIO###$1\n###FIM###\n|g+
+ZZ#INICIO###(.*)###FIM###(.*)|NFe: {$1}|g+
+^NFe: ...,\n(.*)$|NFe: {\n$1\n|g+

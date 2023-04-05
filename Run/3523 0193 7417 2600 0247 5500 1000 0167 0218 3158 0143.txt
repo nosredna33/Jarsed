@@ -1,0 +1,89 @@
+﻿Brasil
+CORONAVÍRUS (COVID-19)
+Simplifique!
+Participe
+Acesso à informação
+Legislação
+Canais
+O conteúdo desse portal pode ser acessível em Libras usando o VLibras
+Conheça a NF-eServiçosLegislaçãoDocumentosDownloadsÁrea RestritaDocumentos e outros
+Serviços
+Legislação
+Documentos
+Downloads
+Estatísticas da NF-e
+NF-e Autorizadas
+36,42 bilhões
+Número de Emissores
+2,191 milhões
+... saiba mais
+Área Restrita
+Central de Atendimento
+Perguntas Frequentes
+Portais e Secretarias
+Portais Estaduais da NF-e
+Selecione
+Secretarias de Fazenda
+Selecione
+Você está aqui:
+Página Principal
+>
+Serviços
+>
+Consultar NF-e
+Consultar NF-e
+Nova Consulta
+Download do documento*
+*Requer certificado digital.
+Dados Gerais
+Chave de Acesso3523 0193 7417 2600 0247 5500 1000 0167 0218 3158 0143Número16702Versão XML4.00
+NFe
+Emitente
+Destinatário
+Produtos e Serviços
+Totais
+Transporte
+Cobrança
+Informações Adicionais
+Dados da NF-e
+Modelo55Série1Número16702Data de Emissão10/01/2023 09:13:00-03:00
+Data Saída/Entrada
+Valor Total da Nota Fiscal 45.360,00
+Emitente
+CNPJ93.741.726/0002-47Nome / Razão SocialEUROIMMUN BRASIL MEDICINA DIAGNOSTICA LTDAInscrição Estadual206568446112UFSP
+Destinatário
+CNPJ00.394.544/0008-51Nome / Razão SocialMINISTERIO DA SAUDEInscrição EstadualUFDF
+Destino da operação
+2 - Operação Interestadual
+Consumidor final
+1 - Consumidor final
+Presença do Comprador
+9 - Operação não presencial (outros)
+Emissão
+Processo
+0 - com aplicativo do Contribuinte
+Versão do Processo1211320218
+Tipo de Emissão1 - NormalFinalidade
+1 - Normal
+Natureza da OperaçãoVenda de mercadoria entregue ao destinatario por conta e ordIndicador de Intermediador/Marketplace
+0 - Operação sem intermediador
+Tipo da Operação
+1 - Saída
+Digest Value da NF-e
+B8h5JIXEV8tMW+E5WnOlFOgvaU4=
+Situação Atual:
+AUTORIZADA
+(Ambiente de autorização:
+produção)
+Eventos da NF-eProtocoloData AutorizaçãoData Inclusão AN
+Autorização de Uso
+135230044662523 10/01/2023 às 09:13:34-03:0010/01/2023 às 09:13:36
+Carta de Correção Eletrônica (Orgão Autor:
+SP)
+135230045317636 10/01/2023 às 10:25:06-03:0010/01/2023 às 10:25:07
+Exibir Autorização de Uso
+Preparar aba para impressão
+Preparar documento para impressão
+Conheça a NF-eServiçosLegislaçãoDocumentosDownloadsÁrea RestritaDocumentos e outros
+Portal da NF-e 2023 - Nota Fiscal Eletrônica
+Receita Federal
