@@ -18,8 +18,6 @@ import java.io.OutputStreamWriter;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Vector;
 
 /**
