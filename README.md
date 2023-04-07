@@ -63,6 +63,8 @@ Vide mais detalhes no comentários do exemplo de script a seguir.
  5. Permitir o fatiamento de um aquivo de entrada em vários arquivos de saída com base nas regras de validação das linhas.
  6. Acrescentar constantes simbólicas associados ao contexto de  execução como: @nomeArquivoEntrada, @DiretorioTrabalho, @Data, @Hora, ...
  7. Substituir o uso da método String.replaceAll, por Pattern e Matches (80% pronto);
+ 8. Criar um editor de Scripts, parecido com o [https://regex101.com/](https://regex101.com/);
+ 
 
 # Como ajuda no Projeto
 
@@ -79,4 +81,5 @@ Vide mais detalhes no comentários do exemplo de script a seguir.
 - Ao café que me deixa com cérebro ativo!
 - A Heineken que faz o contrário do café, quando eu preciso dormir!
 - A minha filha que me inspira!
+- Ao fantástico editor e validador de REGEXP: [https://regex101.com/](https://regex101.com/);
 - E, a todos que quiserem colaborar de alguma forma com este projeto.
