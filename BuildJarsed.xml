@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="BuildJarsed.xsd" default="JarsedBuild_jar" 
+         name="Criando um Jar Executável pata o Projeto Jarsed, incluindo jars necessários">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+	<property name="version.num" value="1.0.0."/>
+	<buildnumber file="build.num" />
+	<property name="build.number" value="${build.number}"/>  	
+    <property name="Project.Name" value="Jarsed"/>	
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/releases"/>
+    <property name="WorkDir" value="c:/Projetos/DLOG"/>
+    <property name="JARFile" value="${dir.jarfile}/${Project.Name}-${version.num}${build.number}.jar"/>
+    <target name="JarsedBuild_jar">
+        <jar destfile="${JARFile}">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="br.gov.saude.anderson.Parser"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./"/>
+            </manifest>
+            <zipfileset src="${dir.buildfile}/libs/jar-in-jar-loader.zip"/>
+            <fileset dir="${dir.buildfile}/bin"/>
+        </jar>
+		<copy file="${JARFile}" todir="${WorkDir}/bin"> </copy>
+		<copy file="${JARFile}" tofile="${WorkDir}/bin/${Project.Name}.jar"> </copy>
+		<copy file="${JARFile}" tofile="${WorkDir}/bin/${Project.Name}.jar"> </copy>
+		<mkdir dir="${WorkDir}/bin/resources"/>
+		<copy todir="${WorkDir}/bin/resources">
+		  <fileset dir="${dir.buildfile}/bin/resources">
+		    <exclude name="**/*.java"/>
+		  </fileset>
+		</copy>
+	</target>
+</project>
