@@ -1,18 +1,16 @@
 \r\n|\n|g+
 \n\n+|\n|g+
+#\\n|\n|g+
 Brasil.*Dados Gerais||g+
-Chave de Acesso|ChaveAcesso: |g+
-(ChaveAcesso:) *([0-9 ]*)|$1 "$2"\n|g+
-(N.*mero)([0-9]*)(Vers.*XML.*)|Numero: "$2"\n$3|g+
-Vers.*XML([^\n]*)\n|VersaoXML: "$1"\n|g+
+Chave de Acesso([0-9 ]*)N.*mero(.*)|ChaveAcesso: "$1"\nNumero#$2\n|g
+Numero#([0-9]*)|Numero: "$1"\n|g
+Vers.*XML(.*)|VersaoXML: "$1"\n|g
 NFe(.*)Modelo|Modelo#|g+
 Modelo#([0-9]+).*rie([0-9]+).*mero([0-9]+)Data de Emis.*o(.*)\nData|Modelo: "$1"\nSerie: "$2"\nNumeroSeq: "$3"\nEmissaoEm: $4\nData|g+
 EmissaoEm.*([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9])\nData|EmissaoEm: "$3-$2-$1T$4:$5:$6"\nData|g+
-Data.*Entrada(.*)\nValor |DataSaidaEntrada: "$1"\nValor: |g+
-DataSaidaEntrada. .([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).\nValor|DataSaidaEntrada: "$3-$2-$1T$4:$5:$6"\nValor|g+
-Valor.*Fiscal (.*)\n|ValorTotalNFe: "$1"\n|g
-ValorTotalNFe: "(.*)(\.)(.*)"|ValorTotalNFe: "$1$3"|g+
-ValorTotalNFe: "(.*)(,)(.*)"|ValorTotalNFe: "$1.$3"|g+
+Data.*Entrada(.*)Valor Total da Nota Fiscal|DataSaidaEntrada#$1\nValorTotalNFe#|g+
+ValorTotalNFe# (.*)|ValorTotalNFe: "$1"\n|g
+DataSaidaEntrada#\n([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]) ([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9]).([0-9][0-9])\n|DataSaidaEntrada: "$3-$2-$1T$4:$5:$6"\n|g+
 Emitente.*CNPJ(.*)Nome .* Social(.*)Inscri.*Estadual([0-9]*)UF([A-Z][A-Z])+.*Destina.*\nCNPJ|CNPJEmitente: "$1"\nNomeEmitente: "$2"\nIEEmitente: "$3"\nIEUFEmitente: "$4"\nCNPJDestinatario#|g+
 CNPJDestinatario#(.*)Nome|CNPJDestinatario: "$1"\nNome#|g+
 Nome#.*Social(.*)Inscri.*Estadual([0-9]*)UF([A-Z][A-Z])\n|NomeDestinatario: "$1"\nIEDestinatario: "$2"\nIEUFDestinatario: "$3"\n|g+
@@ -21,7 +19,8 @@ ConsumidorFinal: final.*([0-9]+) - (.*)\nPresença|ConsumidorFinal: {key: $1, va
 PresencaComprador:  do Comprador\n([0-9]+) - (.*)\nEmis.*Processo\n([0-9]+) - (.*)\nVers.*Processo|PresencaComprador: {$1, "$2"}\nProcessoEmissao: {$3, "$4"}\nProcesso#|g+
 Processo#.*Tipo de Emiss.*([0-9]+) - (.*)Finalidade\n|TipoEmissao: {key: $1, value: "$2"}\nFinalidade#|g+
 Finalidade#(.*)([0-9]+) - (.*)\nNatureza|Finalidade: {key: $2, value: "$3"}\nNatureza#|g+
-Natureza# da Oper.*o(.*)Indicador.*\n([0-9]+) - (.*)\nTipo|NaturezaOperacao: "$1"\nMarketplace: {key: $2, value: "$3"}\nTipoOperacao#|g+
+Natureza# da Opera..o(.*)Indicador de Intermediador.Marketplace|NaturezaOperacao: "$1"\nMarketplace#|g
+Marketplace#\n([0-9]+) - (.*)\nTipo|Marketplace: {key: $1, value: "$2"}\nTipoOperacao#|g+
 TipoOperacao#.*da .*\n([0-9]+) - (.*)\nDigest|TipoOperacao: {key: $1, value: "$2"}\nDigestNF#|g+
 DigestNF#.*NF-e\n([^\n]*)\n|DigestNFe: "$1"\n|g+
 Situa.*Atua.*\n([^\n]*)\n([^\n]*)\n([^\n]*)\nEventos|SituacaoAtual: "$1 $2 $3"\nEventos#|g+
@@ -29,9 +28,57 @@ Eventos#.*Protocolo.*Data.*Auto.*Data Inc.*\n(Auto.*Uso)\n(.*)\nExibir|EventosNF
 EventosNFeProtocolo#(.*)#\n([0-9]+) (.*)\nExibir|EventosNFeProtocolo: "$2"$1\n$3\nExibir|g+
 EventosNFeProtocoloDataAuto#\n.*([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]).*s ([0-9][0-9]).([0-9][0-9]).([0-9][0-9])-([0-9][0-9]).([0-9][0-9])(.*)\nExibir|EventosNFeProtocoloDataAuto: "$3-$2-$1T$4:$5:$6"\nEventosNFeProtocoloDataInc# $9\nExibir|g+
 EventosNFeProtocoloDataInc# ([0-9][0-9]).([0-9][0-9]).([0-9][0-9][0-9][0-9]).*s ([0-9][0-9]).([0-9][0-9]).([0-9][0-9])(.*)\nExibir|EventosNFeProtocoloDataInc: "$3-$2-$1T$4:$5:$6"$7\nExibir|g+
-Exibir (.*)Receita Federal\n(.*)|###FIM###\n|g+
+Exibir (.*)Receita Federal(.*)###INICIOPARTE3###|###INICIOPARTE3###\n|g+
+(#nn#)|\n|g+
+# Base de .* ST(.*)\nValorICMS:|BaseCalculoICMSST: "$1"\nValorICMS:|g+
+Base de C.*culo ICMS( )*(ST)*(.*)|BaseCalculoICMS$2: "$3"|g
+# Troca valores para o formato americano
+BaseCalculoICMS(.*): "(.*)(\.)(.*)"|BaseCalculoICMS$1: "$2$4"|g
+BaseCalculoICMS(.*): "(.*)(,)(.*)"|BaseCalculoICMS$1: "$2.$4"|g
+Valor do ICMS Desonerado(.*)|ValorICMSDesonerado: "$1"|g
+# Trocado a ordem para garantir a desambiguação 
+Valor Total do FCP retido anteriormente por ST(.*)|ValorTotalFCPRetidoAntST: "$1"|g
+Valor Total do FCP retido por ST(.*)|ValorTotalFCPRetidoST: "$1"|g
+Valor Total do FCP(.*)|ValorTotalFCP: "$1"|g
+Valor Total ICMS FCP(.*)|ValorTotalICMSFCP: "$1"|g
+Valor Total ICMS Interestadual UF Destino(.*)|ValorTotalICMSInterestadual: "$1"|g
+Valor Total ICMS Interestadual UF Rem.(.*)|ValorTotalICMSInterestadualRem: "$1"|g
+Valor do ICMS(.*)|ValorICMS: "$1"|g
+Valor ICMS Substitu.*o(.*)|ValorICMSST: "$1"|g
+Valor Total dos Produtos\n\s*(.*)\s*\nValor do Frete|ValorTotalProdutos: "$1"\nValorFrete: |g+
+ValorFrete: (.*)|ValorFrete: "$1"|g
+Valor do Seguro(.*)|ValorSeguro: "$1"|g
+Valor Total dos Descontos(.*)|ValorTotalDescontos: "$1"|g
+# Trocado a ordem para garantir a desambiguação 
+Valor Total do IPI Devolvido(.*)|ValorTotalIPIDevolvido: "$1"\n|g
+Valor Total do IPI(.*)|ValorTotalIPI: "$1"\n|g
+Valor do PIS(.*)|ValordoPIS: "$1"\n|g
+Valor da COFINS(.*)|ValorCOFINS: "$1"\n|g
+Outras Despesas Aces.*rias(.*)|ValorOutrasDespesas: "$1"|g
+Valor Total da NFe(.*)|ValorTotaldaNFe: "$1"|g
+Valor Aproximado dos Tr.*tos(.*)|ValorAproximadoTributos: "$1"\n|g
+Valor Total do II(.*)|ValorTotalII: "$1"\n|g
+\s*ValorTotalProdutos: (.*)|\nValorTotalProdutos: $1|g
+Valor Retido PIS(.*)|ValorRetidoPIS: "$1"|g
+Valor Retido COFINS(.*)|ValorRetidoCOFINS: "$1"|g
+Valor Retido CSLL(.*)|ValorRetidoCSLL: "$1"|g
+Base de C.*lo IRRF(.*)|BaseCalculoIRRF: "$1"|g
+Valor Retido IRRF(.*)|ValorRetidoIRRF: "$1"|g
+Base de C.*lo Previd.*Social(.*)|BaseCalculoPrevSocial: "$1"|g
+Valor Retido Previd.*Social(.*)|ValorRetidoPrevSocial: "$1"|g
+
+# Troca os valores para o formato americano
+Valor(.*): "(.*)(\.)(.*)"|Valor$1: "$2$4"|g
+Valor(.*): "(.*)(,)(.*)"|Valor$1: "$2.$4"|g
+Valor(.*): ""|Valor$1: "0.00"|g
+Base(.*): "(.*)(\.)(.*)"|Base$1: "$2$4"|g
+Base(.*): "(.*)(,)(.*)"|Base$1: "$2.$4"|g
+Base(.*): ""|Base$1: "0.00"|g
+(###INICIOPARTE3###)||g
+(###FIMPARTE3###)|###FIM###|g
+\n\s+\n|\n|g+
+\n\n+|\n|g+
 ([^\n]+)\n|\t$1,\n|g+
-(.*),\n\t###FIM###(.*)|ZZ#INICIO###$1\n###FIM###\n|g+
-ZZ#INICIO###\n\t,\n(.*)|ZZ#INICIO###$1\n###FIM###\n|g+
+(﻿###INICIOPARTE1###.*)||g
+(.*),\n\t###FIM###(.*)|ZZ#INICIO###$1\n###FIM###|g+
 ZZ#INICIO###(.*)###FIM###(.*)|NFe: {$1}|g+
-^NFe: ...,\n(.*)$|NFe: {\n$1\n|g+
